@@ -32,3 +32,15 @@ disable the blocking.
 This only works if your client in questions is using the machine where you're running dnsgatekeeper as a DNS server. I do this by creating a separate vlan and wifi segment using Unifi, and handing out a custom dns server ip in the DHCP settings.
 
 Yes, this is trivially circumventable if you know how to override your local DNS settings. But my kids are not that smart (yet).
+
+## Customizing rules
+
+Currently the file gendnsmasqconf.py contains all the logic to generate the dnsmasq configuration file. You can customize list of allowed and blocked domains by editing this file.
+
+When allowing a new site, you will most likely need to add multiple domains for a site to work properly. Currently I do this by watching the output of this script in the terminal and seeing which domains are being blocked.
+
+# Todo / wishlist
+
+1. Pull out allow list / block list configuration from script file
+1. Detect changes in allow / block lists and reload dnsmasq automatically
+1. Show actively blocked domains in web UI. (this helps when figuring out what domains to allow when configuring a new site)
