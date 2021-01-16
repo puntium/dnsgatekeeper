@@ -1,5 +1,5 @@
 # dnsgatekeeper
-Whitelist-based dns firewall (wrapper around dnsmasq).
+Allow-list-based dns firewall (wrapper around dnsmasq).
 
 I use this currently to allow-list sets of domains for my children. I originally used pihole, but found
 the lack of any kind of wildcard allow-listing too much of a pain to deal with. dnsmasq only offers limited patterns (i.e. you can provide suffixes), but this handles most cases cleanly.
