@@ -15,12 +15,12 @@ You need
 
 First build the pipenv
 
- pipenv lock
- pipenv sync
+    pipenv lock
+    pipenv sync
 
 Then run the script
 
- pipenv run python3 dnsgatekeeper.py
+    pipenv run python3 dnsgatekeeper.py
 
 The script will immediately try to acquire root priveleges, so you will need to type in your password.
 
